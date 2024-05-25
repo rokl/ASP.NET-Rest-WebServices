@@ -3,8 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProgByte.CRM.Rest.WebServices.Extensions.Configuration
 {
+    /// <summary>
+    /// Extension to add versioning to the application
+    /// </summary>
     public static class AddVersioningExtension
     {
+        /// <summary>
+        /// Add versioning to the application
+        /// </summary>
+        /// <param name="services"></param>
         public static void AddVersioning(this IServiceCollection services)
         {
             services.AddApiVersioning(opt =>

@@ -5,8 +5,16 @@ using System.Reflection;
 
 namespace ProgByte.CRM.Rest.WebServices.Extensions.Configuration
 {
+    /// <summary>
+    /// Configuration for Swagger
+    /// </summary>
     public static class AddSwaggerExtension
     {
+        /// <summary>
+        /// Add Swagger configuration
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
         public static void AddSwagger(this IServiceCollection services, ConfigurationManager configuration)
         {
             services.Configure<ApiSettings>(configuration.GetSection(ApiSettings.SectionName));

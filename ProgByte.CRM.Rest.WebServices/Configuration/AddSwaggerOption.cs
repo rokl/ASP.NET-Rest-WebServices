@@ -6,11 +6,19 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace ProgByte.CRM.Rest.WebServices.Configuration
 {
+    /// <summary>
+    /// Configure Swagger Options
+    /// </summary>
     public class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGenOptions>
     {
         private readonly IApiVersionDescriptionProvider _provider;
         private readonly string? _title;
 
+        /// <summary>
+        /// Constructor for the ConfigureSwaggerOptions
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <param name="settings"></param>
         public ConfigureSwaggerOptions(
             IApiVersionDescriptionProvider provider,
             IOptions<ApiSettings> settings)
@@ -47,7 +55,7 @@ namespace ProgByte.CRM.Rest.WebServices.Configuration
         /// <summary>
         /// Create information about the version of the API
         /// </summary>
-        /// <param name="description"></param>
+        /// <param name="desc"></param>
         /// <returns>Information about the API</returns>
         private OpenApiInfo CreateVersionInfo(ApiVersionDescription desc)
         {
